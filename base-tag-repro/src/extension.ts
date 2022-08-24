@@ -35,8 +35,8 @@ export function activate(context: vscode.ExtensionContext) {
 			const baseHref = currentPanel.webview.asWebviewUri(bundledUri);
 
 			currentPanel.webview.html = htmlContent
-				.replace('<head>', `<head><base href="${baseHref}">`)
-				.replace('src="/assets/b.js"', `src="${baseHref}/assets/b.js"`);
+				.replace('<head>', `<head><base href="${baseHref}/">`)
+				.replace('src="assets/b.js"', `src="${baseHref}/assets/b.js"`);
 		})
 	);
 }
